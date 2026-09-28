@@ -1,0 +1,35 @@
+body {
+  font: 14px system-ui;
+  width: 300px;
+  padding: 16px;
+  color: #17232d;
+  background: #f8fafb;
+}
+h1 {
+  font-size: 19px;
+}
+label {
+  display: block;
+  margin: 12px 0;
+}
+select,
+input[type="number"] {
+  display: block;
+  margin-top: 6px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px;
+}
+p {
+  font-size: 12px;
+  color: #465666;
+}
+button {
+  padding: 8px;
+  margin: 6px 4px 6px 0;
+}
+output {
+  display: block;
+  white-space: pre-line;
+  margin-top: 12px;
+}

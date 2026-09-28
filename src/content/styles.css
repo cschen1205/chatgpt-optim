@@ -1,0 +1,15 @@
+.lcopt-auto {
+  content-visibility: auto !important;
+  contain-intrinsic-size: auto var(--lcopt-height, 600px);
+}
+.lcopt-parked {
+  content-visibility: hidden !important;
+  contain-intrinsic-size: auto var(--lcopt-height, 600px);
+}
+@media print {
+  .lcopt-auto,
+  .lcopt-parked {
+    content-visibility: visible !important;
+    contain-intrinsic-size: none !important;
+  }
+}

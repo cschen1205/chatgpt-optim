@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        margin: 0;
+        font: 16px/1.5 system-ui;
+      }
+      #scroller {
+        height: 800px;
+        height: 100vh;
+        overflow-y: auto;
+      }
+      main {
+        max-width: 850px;
+        margin: auto;
+      }
+      article {
+        padding: 16px;
+        border-bottom: 1px solid #ccc;
+      }
+      p {
+        margin: 6px 0;
+      }
+      pre {
+        white-space: pre-wrap;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        border: 1px solid #ddd;
+        padding: 3px;
+      }
+      .placeholder {
+        height: 120px;
+        background: #ddd;
+      }
+      #huge {
+        height: 20000px;
+        background: linear-gradient(#ddd, #eee);
+      }
+      form {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="scroller"><main></main></div>
+    <form><textarea aria-label="Composer"></textarea></form>
+    <script>
+      const main = document.querySelector("main");
+      for (let i = 0; i < 400; i++) {
+        const article = document.createElement("article");
+        article.dataset.testid = "conversation-turn-" + i;
+        const role = document.createElement("div");
+        role.dataset.messageAuthorRole = i % 2 ? "assistant" : "user";
+        for (let j = 0; j < 45; j++) {
+          const p = document.createElement("p");
+          for (let k = 0; k < 3; k++) {
+            const span = document.createElement("span");
+            span.textContent = `Sample ${i} / ${j} / ${k}. `;
+            p.append(span);
+          }
+          role.append(p);
+        }
+        if (i % 7 === 0) {
+          const pre = document.createElement("pre");
+          pre.textContent = Array.from(
+            { length: 10 + (i % 19) },
+            (_, j) => `const value${j} = ${j};`,
+          ).join("\n");
+          role.append(pre);
+        }
+        if (i % 11 === 0) {
+          const table = document.createElement("table");
+          for (let j = 0; j < 8; j++) {
+            const tr = document.createElement("tr");
+            for (let k = 0; k < 4; k++) {
+              const td = document.createElement("td");
+              td.textContent = "Cell";
+              tr.append(td);
+            }
+            table.append(tr);
+          }
+          role.append(table);
+        }
+        if (i % 13 === 0) {
+          const image = document.createElement("div");
+          image.className = "placeholder";
+          image.setAttribute("role", "img");
+          image.setAttribute("aria-label", "Synthetic image placeholder");
+          role.append(image);
+        }
+        if (i === 180) {
+          const huge = document.createElement("div");
+          huge.id = "huge";
+          role.append(huge);
+        }
+        const button = document.createElement("button");
+        button.textContent = "Copy sample";
+        role.append(button);
+        article.append(role);
+        main.append(article);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+{
+  "browser": "146.0.7680.164",
+  "generatedAt": "2026-09-28T07:54:01.646Z",
+  "fixture": "400 turns; deterministic mixed content; 120 frames of upward scrolling with 24 streaming updates",
+  "results": [
+    {
+      "trial": 1,
+      "mode": "disabled",
+      "LayoutDurationMs": 53.199000000000005,
+      "RecalcStyleDurationMs": 0.6629999999999999,
+      "TaskDurationMs": 290.459,
+      "ScriptDurationMs": 45.638999999999996,
+      "paintMs": 58.201,
+      "maxPageLongTaskMs": 0,
+      "longTasks": 0,
+      "p95FrameMs": 16.80000001192093,
+      "maxObservedExtensionBatchMs": 0,
+      "descendantNodes": 74831
+    },
+    {
+      "trial": 1,
+      "mode": "balanced",
+      "LayoutDurationMs": 41.47,
+      "RecalcStyleDurationMs": 3.565,
+      "TaskDurationMs": 295.39799999999997,
+      "ScriptDurationMs": 128.612,
+      "paintMs": 15.257,
+      "maxPageLongTaskMs": 0,
+      "longTasks": 0,
+      "p95FrameMs": 16.80000001192093,
+      "maxObservedExtensionBatchMs": 2.099999964237213,
+      "descendantNodes": 74831,
+      "diagnostics": {
+        "rootFound": true,
+        "managed": 400,
+        "near": 5,
+        "parked": 0,
+        "cachedHeights": 400,
+        "observerEvents": 24,
+        "reason": "Active",
+        "lastBatchMs": 0.7000000476837158
+      }
+    },
+    {
+      "trial": 1,
+      "mode": "strong",
+      "LayoutDurationMs": 48.199,
+      "RecalcStyleDurationMs": 3.914,
+      "TaskDurationMs": 295.10299999999995,
+      "ScriptDurationMs": 131.61,
+      "paintMs": 13.875,
+      "maxPageLongTaskMs": 0,
+      "longTasks": 0,
+      "p95FrameMs": 16.80000001192093,
+      "maxObservedExtensionBatchMs": 1.800000011920929,
+      "descendantNodes": 74831,
+      "diagnostics": {
+        "rootFound": true,
+        "managed": 400,
+        "near": 5,
+        "parked": 392,
+        "cachedHeights": 400,
+        "observerEvents": 24,
+        "reason": "Active",
+        "lastBatchMs": 0.699999988079071
+      }
+    },
+    {
+      "trial": 2,
+      "mode": "disabled",
+      "LayoutDurationMs": 53.987,
+      "RecalcStyleDurationMs": 0.673,
+      "TaskDurationMs": 288.815,
+      "ScriptDurationMs": 45.437,
+      "paintMs": 56.698,
+      "maxPageLongTaskMs": 0,
+      "longTasks": 0,
+      "p95FrameMs": 16.80000001192093,
+      "maxObservedExtensionBatchMs": 0,
+      "descendantNodes": 74831
+    },
+    {
+      "trial": 2,
+      "mode": "balanced",
+      "LayoutDurationMs": 40.494,
+      "RecalcStyleDurationMs": 3.368,
+      "TaskDurationMs": 292.103,
+      "ScriptDurationMs": 129.465,
+      "paintMs": 14.665,
+      "maxPageLongTaskMs": 0,
+      "longTasks": 0,
+      "p95FrameMs": 16.80000001192093,
+      "maxObservedExtensionBatchMs": 1.7999999523162842,
+      "descendantNodes": 74831,
+      "diagnostics": {
+        "rootFound": true,
+        "managed": 400,
+        "near": 5,
+        "parked": 0,
+        "cachedHeights": 400,
+        "observerEvents": 24,
+        "reason": "Active",
+        "lastBatchMs": 0.7999999523162842
+      }
+    },
+    {
+      "trial": 2,
+      "mode": "strong",
+      "LayoutDurationMs": 49.87,
+      "RecalcStyleDurationMs": 3.907,
+      "TaskDurationMs": 297.104,
+      "ScriptDurationMs": 130.57,
+      "paintMs": 13.988,
+      "maxPageLongTaskMs": 0,
+      "longTasks": 0,
+      "p95FrameMs": 16.80000001192093,
+      "maxObservedExtensionBatchMs": 1.600000023841858,
+      "descendantNodes": 74831,
+      "diagnostics": {
+        "rootFound": true,
+        "managed": 400,
+        "near": 5,
+        "parked": 392,
+        "cachedHeights": 400,
+        "observerEvents": 24,
+        "reason": "Active",
+        "lastBatchMs": 0.699999988079071
+      }
+    }
+  ]
+}

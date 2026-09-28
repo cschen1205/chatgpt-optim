@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Long Chat Optimizer</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <h1>Long Chat Optimizer</h1>
+    <form id="settings">
+      <label><input id="enabled" type="checkbox" /> Enable optimization</label>
+      <label
+        >Mode<select id="mode">
+          <option value="balanced">Balanced — Recommended</option>
+          <option value="strong">Strong — Experimental</option>
+        </select></label
+      >
+      <p>
+        Strong mode may temporarily limit find, keyboard navigation, selection,
+        and accessibility. Use Balanced for accessibility-sensitive work.
+      </p>
+      <label
+        >Active buffer (screens)<input
+          id="restore"
+          type="number"
+          min="1"
+          max="10"
+          step="1"
+      /></label>
+      <label
+        >Park distance (screens)<input
+          id="park"
+          type="number"
+          min="3"
+          max="20"
+          step="1"
+      /></label>
+      <button type="submit">Save</button
+      ><button id="restore-all" type="button">Restore all now</button>
+    </form>
+    <output id="status" aria-live="polite">Loading…</output>
+    <script src="popup.js"></script>
+  </body>
+</html>
